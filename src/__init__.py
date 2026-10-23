@@ -35,7 +35,7 @@ def image_batch_generator(folder_path, batch_size=32, target_size=(224, 224)):
                     threshold1 = 50
                     threshold2 = 150
                     canny = cv.Canny(blur, threshold1, threshold2, 3)
-                    batch_images.append(bilateralFilter)
+                    batch_images.append(canny)
                     cv.imshow("My image", canny)
                     # cv.imshow("No filter", img)
                     cv.waitKey(0)
